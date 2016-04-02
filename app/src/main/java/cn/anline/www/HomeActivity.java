@@ -2,14 +2,10 @@ package cn.anline.www;
 
 import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.LayerDrawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -92,7 +88,29 @@ public class HomeActivity extends Activity {
 
         //内页控件监听
     }
+    public void setLayoutBg(int annn){
+        switch (annn) {
+            case 0:
+                layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.ann_bg));
+                break;
+            case  1:
+                layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.service_bg));
+                break;
+            case 2:
+                layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.find_bg));
+                break;
+            case 3:
+                layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.biz_bg));
+                break;
+            case 4:
+                layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.zone_bg));
+                break;
+            default:
+                layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.anbg));
+                break;
+        }
 
+    }
     /**
      * 头标点击监听
      */
@@ -123,7 +141,7 @@ public class HomeActivity extends Activity {
                 case 0:
                 {
                     mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.annpress));
-                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.ann_bg));
+                    setLayoutBg(0);
                     if (currIndex == 1)
                     {
                         mTabService.setImageDrawable(getResources().getDrawable(R.drawable.service));
@@ -145,7 +163,7 @@ public class HomeActivity extends Activity {
                 case 1:
                 {
                     mTabService.setImageDrawable(getResources().getDrawable(R.drawable.servicepress));
-                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.service_bg));
+                    setLayoutBg(1);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -167,8 +185,7 @@ public class HomeActivity extends Activity {
                 case 2:
                 {
                     mTabFind.setImageDrawable(getResources().getDrawable(R.drawable.findpress));
-
-                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.find_bg));
+                    setLayoutBg(2);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -190,7 +207,7 @@ public class HomeActivity extends Activity {
                 case 3:
                 {
                     mTabBiz.setImageDrawable(getResources().getDrawable(R.drawable.bizpress));
-                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.biz_bg));
+                    setLayoutBg(3);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -212,7 +229,7 @@ public class HomeActivity extends Activity {
                 case 4:
                 {
                     mTabZone.setImageDrawable(getResources().getDrawable(R.drawable.zonepress));
-                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.zone_bg));
+                    setLayoutBg(4);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
