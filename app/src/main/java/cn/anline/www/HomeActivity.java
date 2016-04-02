@@ -141,7 +141,7 @@ public class HomeActivity extends Activity {
                 case 0:
                 {
                     mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.annpress));
-                    setLayoutBg(0);
+//                    setLayoutBg(0);
                     if (currIndex == 1)
                     {
                         mTabService.setImageDrawable(getResources().getDrawable(R.drawable.service));
@@ -163,7 +163,7 @@ public class HomeActivity extends Activity {
                 case 1:
                 {
                     mTabService.setImageDrawable(getResources().getDrawable(R.drawable.servicepress));
-                    setLayoutBg(1);
+//                    setLayoutBg(1);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -185,7 +185,7 @@ public class HomeActivity extends Activity {
                 case 2:
                 {
                     mTabFind.setImageDrawable(getResources().getDrawable(R.drawable.findpress));
-                    setLayoutBg(2);
+//                    setLayoutBg(2);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -207,7 +207,7 @@ public class HomeActivity extends Activity {
                 case 3:
                 {
                     mTabBiz.setImageDrawable(getResources().getDrawable(R.drawable.bizpress));
-                    setLayoutBg(3);
+//                    setLayoutBg(3);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -229,7 +229,7 @@ public class HomeActivity extends Activity {
                 case 4:
                 {
                     mTabZone.setImageDrawable(getResources().getDrawable(R.drawable.zonepress));
-                    setLayoutBg(4);
+//                    setLayoutBg(4);
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
