@@ -2,26 +2,34 @@ package cn.anline.www;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
 public class HomeActivity extends Activity {
     private ViewPager mTabPager;
     private ImageView mTabAnn,mTabService,mTabFind,mTabBiz,mTabZone;
+    private RelativeLayout layout;
     private int currIndex = 0;// 当前页卡编号
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        layout = (RelativeLayout) findViewById(R.id.mainweixin);
 
         mTabPager = (ViewPager)findViewById(R.id.tabpager);
         mTabPager.setOnPageChangeListener(new MyOnPageChangeListener());
@@ -31,6 +39,8 @@ public class HomeActivity extends Activity {
         mTabFind = (ImageView) findViewById(R.id.tab_img_find);
         mTabBiz = (ImageView) findViewById(R.id.tab_img_biz);
         mTabZone = (ImageView) findViewById(R.id.tab_img_zone);
+
+
         mTabAnn .setOnClickListener(new MyOnClickListener(0));
         mTabService.setOnClickListener(new MyOnClickListener(1));
         mTabFind.setOnClickListener(new MyOnClickListener(2));
@@ -113,6 +123,7 @@ public class HomeActivity extends Activity {
                 case 0:
                 {
                     mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.annpress));
+                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.ann_bg));
                     if (currIndex == 1)
                     {
                         mTabService.setImageDrawable(getResources().getDrawable(R.drawable.service));
@@ -134,6 +145,7 @@ public class HomeActivity extends Activity {
                 case 1:
                 {
                     mTabService.setImageDrawable(getResources().getDrawable(R.drawable.servicepress));
+                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.service_bg));
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -155,6 +167,8 @@ public class HomeActivity extends Activity {
                 case 2:
                 {
                     mTabFind.setImageDrawable(getResources().getDrawable(R.drawable.findpress));
+
+                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.find_bg));
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -176,6 +190,7 @@ public class HomeActivity extends Activity {
                 case 3:
                 {
                     mTabBiz.setImageDrawable(getResources().getDrawable(R.drawable.bizpress));
+                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.biz_bg));
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));
@@ -197,6 +212,7 @@ public class HomeActivity extends Activity {
                 case 4:
                 {
                     mTabZone.setImageDrawable(getResources().getDrawable(R.drawable.zonepress));
+                    layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.zone_bg));
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));

@@ -23,7 +23,7 @@
         <activity android:name=".pager.FindActivity" />
         <activity android:name=".pager.BizActivity" />
         <activity android:name=".pager.ZoneActivity" />
-        <activity android:name=".qrcode.QrWebActivity"></activity>
+        <activity android:name=".qrcode.QrWebActivity" />
     </application>
 
 </manifest>
