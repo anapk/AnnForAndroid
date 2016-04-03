@@ -2,6 +2,8 @@ package cn.anline.www;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
@@ -9,15 +11,92 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HomeActivity extends Activity {
     private ViewPager mTabPager;
     private ImageView mTabAnn,mTabService,mTabFind,mTabBiz,mTabZone;
     private RelativeLayout layout;
+//    private ListView zoneListView;
+//    private AdapterListView adapterListView;
+
+    String[] aTitle = {
+            "安浪1",
+            "安浪2",
+            "安浪3",
+            "安浪4",
+            "安浪5",
+            "安浪6",
+            "安浪7",
+            "安浪8",
+            "安浪9",
+            "安浪10",
+            "安浪11",
+            "安浪12",
+            "安浪13",
+            "安浪14",
+            "安浪15",
+            "安浪16",
+            "安浪17",
+            "安浪18",
+            "安浪19",
+            "安浪20"
+    };
+    int[] aPic ={
+            R.drawable.m1,
+            R.drawable.m2,
+            R.drawable.m3,
+            R.drawable.m4,
+            R.drawable.m5,
+            R.drawable.m6,
+            R.drawable.m7,
+            R.drawable.m8,
+            R.drawable.m9,
+            R.drawable.m10,
+            R.drawable.m11,
+            R.drawable.m12,
+            R.drawable.m13,
+            R.drawable.m14,
+            R.drawable.m15,
+            R.drawable.m16,
+            R.drawable.m17,
+            R.drawable.m18,
+            R.drawable.m19,
+            R.drawable.m20
+
+    };
+    String[] aDesc ={
+            "1网站建设，网站开发，域名注册，主机开通，服务器运营维护",
+            "2网络营销，产品视觉设计，产品渠道，销售管理系统，在线支付",
+            "3网贷系统，理财系统，信用卡服务，外贸货币",
+            "4在线编程，视频讲课，远程教育，课程系统，在线考试",
+            "5智能家居，室内环保，家用电器，装修设计，地产中介服务",
+            "6汽车销售，汽车修理，汽车装饰，二手车交易，租车",
+            "7大众创新，万众创业，艰苦奋斗，融资合伙",
+            "8物联网硬件，串口程序，控制系统，机器人开发",
+            "9地区特产，绿色农产品，在线农场，生鲜果蔬和肉类",
+            "10网站建设，网站开发，域名注册，主机开通，服务器运营维护",
+            "11网络营销，产品视觉设计，产品渠道，销售管理系统，在线支付",
+            "12网贷系统，理财系统，信用卡服务，外贸货币",
+            "13在线编程，视频讲课，远程教育，课程系统，在线考试",
+            "14智能家居，室内环保，家用电器，装修设计，地产中介服务",
+            "15汽车销售，汽车修理，汽车装饰，二手车交易，租车",
+            "16大众创新，万众创业，艰苦奋斗，融资合伙",
+            "17物联网硬件，串口程序，控制系统，机器人开发",
+            "18地区特产，绿色农产品，在线农场，生鲜果蔬和肉类",
+            "19物联网硬件，串口程序，控制系统，机器人开发",
+            "20地区特产，绿色农产品，在线农场，生鲜果蔬和肉类"
+    };
+    ArrayList<Map<String,Object>> aData = new ArrayList<Map<String,Object>>();
     private int currIndex = 0;// 当前页卡编号
 
     @Override
@@ -84,9 +163,18 @@ public class HomeActivity extends Activity {
             }
         };
         mTabPager.setAdapter(mPagerAdapter);
+//        zoneListView = (ListView) findViewById(R.id.listView);
+//        int lengh = aTitle.length;
+//        for (int i=0;i<lengh;i++){
+//            Map<String,Object> item = new HashMap<String, Object>();
+//            item.put("title",aTitle[i]);
+//            item.put("pic",aPic[i]);
+//            item.put("desc",aDesc[i]);
+//            aData.add(item);
+//        }
 
+//        SimpleAdapter adapter = new SimpleAdapter(this,aData,R.layout.zone_listview,new String[]{"title","pic","desc"},new int[]{R.id.myT1,R.id.myPic,R.id.myT2});
 
-        //内页控件监听
     }
     public void setLayoutBg(int annn){
         switch (annn) {
@@ -230,6 +318,15 @@ public class HomeActivity extends Activity {
                 {
                     mTabZone.setImageDrawable(getResources().getDrawable(R.drawable.zonepress));
 //                    setLayoutBg(4);
+//                    zoneListView.setSelector(new ColorDrawable(Color.BLUE));
+//                    adapterListView = new AdapterListView(getApplicationContext(),aTitle,aPic,aDesc);
+//                    zoneListView.setAdapter(adapterListView);
+//                    zoneListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                        @Override
+//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                            Toast.makeText(getApplicationContext(), "您点击了" + aTitle[position], Toast.LENGTH_LONG).show();
+//                        }
+//                    });
                     if (currIndex == 0)
                     {
                         mTabAnn.setImageDrawable(getResources().getDrawable(R.drawable.ann));

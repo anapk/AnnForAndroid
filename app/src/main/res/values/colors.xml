@@ -5,4 +5,23 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorTabBG">#fa063a</color>
     <color name="colorTabText">#fffc00</color>
+    <!-- 白色 -->
+    <color name="bg_White">#FFFFFF</color>
+    <!-- 黑色 -->
+    <color name="bg_Black">#000000</color>
+    <!-- 灰色 -->
+    <color name="bg_Gray">#CCCCCC</color>
+
+    <!-- 浅灰色 -->
+    <color name="bg_Gray_light">#EEEEEE</color>
+
+    <!-- 白色 -->
+    <color name="tv_White">#FFFFFF</color>
+    <!-- 黑色 -->
+    <color name="tv_Black">#000000</color>
+    <!-- 红色 -->
+    <color name="tv_Red">#CC0000</color>
+    <!-- 灰色 -->
+    <color name="tv_Gray">#CCCCCC</color>
+
 </resources>
