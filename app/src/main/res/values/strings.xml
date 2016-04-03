@@ -8,4 +8,85 @@
     <string name="find">发现</string>
     <string name="biz">商业</string>
     <string name="zone">空间</string>
+
+
+    <string name="syn_tech">同步教材</string>
+    <string name="exam_room">模拟考场</string>
+    <string name="famous_book">文学名著</string>
+    <string name="best_head">最強大腦</string>
+    <string name="user_manager">用戶管理</string>
+    <string name="add_account">账戶充值</string>
+    <string name="my_download">下载管理</string>
+    <string name="sys_setting">系統設置</string>
+    <string name="about_us">关于我們</string>
+    <string name="exception_timeout">网络超时</string>
+    <string name="exception_parse">解析数据异常</string>
+    <string name="phone_text">手机号码</string>
+    <string name="password_text">输入密码</string>
+    <string name="please_login_text">请登录</string>
+    <string name="login">登录</string>
+    <string name="reset">重置</string>
+    <string name="ok">确认</string>
+    <string name="no_register">还没有加入？</string>
+    <string name="register_text">立即注册！</string>
+    <string name="foget_password">忘记密码？</string>
+    <string name="find_password">立即找回！</string>
+    <string name="password_find">密码找回</string>
+    <string name="user_register">用户注册</string>
+    <string name="name_text">姓名</string>
+    <string name="sex_text">性别</string>
+    <string name="pwd_text">密码</string>
+    <string name="repwd_text">确认密码</string>
+    <string name="code_text">验证码</string>
+    <string name="register">注册</string>
+    <string name="boy_text">男</string>
+    <string name="girl_text">女</string>
+    <string name="get_code_text">获取验证码</string>
+    <string name="new_password_to_phone">新密码发送至手机</string>
+    <string name="card_text">卡号</string>
+    <string name="card_pwd_text">卡密码</string>
+    <string name="pay_account_text">充值账号</string>
+    <string name="repay_account_text">账号确认</string>
+    <string name="pay_account_ok">充值</string>
+    <string name="card_number">欧科卡号：</string>
+    <string name="account_number">账号：</string>
+    <string name="pay_yes_or_no">是否确认充值？</string>
+    <string name="introduce">软件介绍</string>
+    <string name="check_update">检查更新</string>
+    <string name="company_eng_name">OClass</string>
+    <string name="copyright">深圳欧科科技有限公司版权所有</string>
+    <string name="app_version">v1.0</string>
+    <string name="default_setting">默认\n设置</string>
+    <string name="base_text">基本介绍</string>
+    <string name="download_text">下载安装</string>
+    <string name="register_login_text">注册登录</string>
+    <string name="server_phone">客服电话：400-0000-0000</string>
+
+    <string-array name="sync_tech_array">
+        <item>本地教材</item>
+        <item>在线教材</item>
+    </string-array>
+    <string-array name="best_head_array">
+        <item>游戏列表</item>
+        <item>奖励记录</item>
+        <item>最强排名</item>
+    </string-array>
+    <string-array name="download_array">
+        <item>正在下载</item>
+        <item>已下载</item>
+    </string-array>
+    <string-array name="exam_array">
+        <item>模拟考场</item>
+        <item>考试成绩</item>
+        <item>答案解析</item>
+    </string-array>
+    <string-array name="famous_book_array">
+        <item>本地书城</item>
+        <item>在线书城</item>
+    </string-array>
+    <string-array name="setting_array">
+        <item>主题色</item>
+        <item>字体大小</item>
+        <item>帮助</item>
+    </string-array>
 </resources>
