@@ -18,6 +18,7 @@ import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -120,6 +121,39 @@ public class HomeActivity extends Activity {
                             return false;
                         }
                     });
+
+                }
+                if(position == 1){//第2个页面的控件监听
+                    Button serviceButton = (Button) findViewById(R.id.service_button);
+                    serviceButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(),"暂时没有可提供服务",Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                }
+                if(position == 2){//第3个页面的控件监听
+                    Button findButton = (Button) findViewById(R.id.find_button);
+                    findButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(),"发现新大陆",Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                }
+                if(position == 3){//第4个页面的控件监听
+                    Button bizButton = (Button) findViewById(R.id.biz_button);
+                    bizButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(),"欢迎商家加盟",Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+                if(position == 4){//第5个页面的控件监听
+
                 }
                 return views.get(position);
             }

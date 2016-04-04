@@ -6,4 +6,11 @@
     android:background="@drawable/biz_bg"
     tools:context="cn.anline.www.pager.BizActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商业"
+        android:id="@+id/biz_button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

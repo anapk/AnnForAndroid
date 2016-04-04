@@ -6,4 +6,11 @@
     android:background="@drawable/find_bg"
     tools:context="cn.anline.www.pager.FindActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发现"
+        android:id="@+id/find_button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
