@@ -63,15 +63,16 @@
                         android:layout_alignBottom="@+id/imageView1"
                         android:layout_alignLeft="@+id/textView1"
                         android:layout_below="@+id/textView1"
-                        android:src="@drawable/user_1" />
+                        android:id="@+id/user_level"
+                        android:src="@drawable/v5" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/imageView1"
-                        android:layout_toRightOf="@+id/textView1"
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/user_2" />
+                        android:layout_toRightOf="@+id/user_level"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/id_verified" />
 
                     <ImageView
                         android:layout_width="20dp"

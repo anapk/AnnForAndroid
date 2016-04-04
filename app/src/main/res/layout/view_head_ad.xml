@@ -1,36 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativelayout_image_slide"
-    android:layout_width="wrap_content"
-    android:layout_height="110dp"
-    android:focusable="true"
-    android:orientation="vertical" >
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/video_banner"
-        android:layout_width="fill_parent"
-        android:layout_height="130dip"
-        android:src="@drawable/video"
-        />
-
-    <RelativeLayout
-        android:id="@+id/layout_title_text"
-        style="@style/Transparent"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" >
-
-        <LinearLayout
-            android:id="@+id/layout_circle_images"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/home_menu1"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:orientation="horizontal" >
-        </LinearLayout>
-    </RelativeLayout>
+            android:layout_height="80dp"
+            android:src="@drawable/home_menu1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/bg_White"
+            android:text="官网"/>
 
-</RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/bg_White" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/home_menu2"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/home_menu2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/bg_White"
+            android:text="展厅"/>
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/bg_White" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/home_menu3"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/home_menu3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/bg_White"
+            android:text="社区"/>
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/bg_White" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/home_menu4"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/home_menu4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/bg_White"
+            android:text="进度"/>
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/bg_White" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/home_menu5"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/home_menu5"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/bg_White"
+            android:text="技术"/>
+    </LinearLayout>
+
+</LinearLayout>

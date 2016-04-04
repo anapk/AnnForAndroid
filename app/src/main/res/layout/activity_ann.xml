@@ -5,14 +5,19 @@
     android:layout_height="match_parent"
     android:background="@drawable/ann_bg"
     tools:context="cn.anline.www.pager.AnnActivity">
+
+    <include layout="@layout/top_menu"
+        android:id="@+id/top_menu"/>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         android:paddingLeft="@dimen/main_layout_margin"
         android:scaleType="matrix"
-        android:src="@drawable/head_logo"
-        android:id="@+id/head_logo"/>
+        android:id="@+id/head_logo"
+        android:background="@drawable/head_logo"
+        android:layout_below="@+id/top_menu"/>
 
     <ScrollView
         android:layout_width="match_parent"
