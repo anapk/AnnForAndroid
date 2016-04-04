@@ -9,16 +9,20 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -93,10 +97,24 @@ public class HomeActivity extends Activity {
             @Override
             public Object instantiateItem(View container, int position) {
                 ((ViewPager)container).addView(views.get(position));
+                if(position == 0) {//第一个页面的控件监听
+                    EditText edit_search;
+                    ImageView iv_qrscan;
+                    edit_search = (EditText) findViewById(R.id.edit_search);
+                    edit_search.setImeOptions(EditorInfo.IME_ACTION_SEND);
+                    edit_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                        @Override
+                        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                            Toast.makeText(getApplicationContext(), "搜索失效", Toast.LENGTH_SHORT).show();
+                            return false;
+                        }
+                    });
+                }
                 return views.get(position);
             }
         };
         mTabPager.setAdapter(mPagerAdapter);
+
 
     }
     public void setLayoutBg(int annn){
