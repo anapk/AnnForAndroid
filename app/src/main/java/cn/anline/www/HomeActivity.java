@@ -2,6 +2,7 @@ package cn.anline.www;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -29,6 +30,8 @@ import android.widget.VideoView;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import cn.anline.www.qrcode.ScannerActivity;
 
 public class HomeActivity extends Activity {
     private ViewPager mTabPager;
@@ -100,6 +103,14 @@ public class HomeActivity extends Activity {
                 if(position == 0) {//第一个页面的控件监听
                     EditText edit_search;
                     ImageView iv_qrscan;
+                    iv_qrscan = (ImageView) findViewById(R.id.scan_qrcode);
+                    iv_qrscan.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intentScanQRcode = new Intent(getApplicationContext(), ScannerActivity.class);
+                            startActivity(intentScanQRcode);
+                        }
+                    });
                     edit_search = (EditText) findViewById(R.id.edit_search);
                     edit_search.setImeOptions(EditorInfo.IME_ACTION_SEND);
                     edit_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {

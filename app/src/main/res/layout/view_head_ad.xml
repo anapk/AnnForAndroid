@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:textColor="@color/bg_White"
-            android:text="官网"/>
+            android:text="@string/home_menu_website"/>
 
     </LinearLayout>
     <View
@@ -46,7 +46,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:textColor="@color/bg_White"
-            android:text="展厅"/>
+            android:text="@string/home_menu_case"/>
     </LinearLayout>
     <View
         android:layout_width="1dp"
@@ -70,7 +70,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:textColor="@color/bg_White"
-            android:text="社区"/>
+            android:text="@string/home_menu_bbs"/>
     </LinearLayout>
     <View
         android:layout_width="1dp"
@@ -94,7 +94,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:textColor="@color/bg_White"
-            android:text="进度"/>
+            android:text="@string/home_menu_news"/>
     </LinearLayout>
     <View
         android:layout_width="1dp"
@@ -118,7 +118,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:textColor="@color/bg_White"
-            android:text="技术"/>
+            android:text="@string/home_menu_welfare"/>
     </LinearLayout>
 
 </LinearLayout>

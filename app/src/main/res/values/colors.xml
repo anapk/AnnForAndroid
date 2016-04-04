@@ -47,6 +47,7 @@
     <color name="process_bakground">#80000000</color>
     <color name="book_bar_color">#80000000</color>
     <color name="syn_book_bg">#ff6678</color>
+    <color name="ann_com">#f703c2</color>
     <color name="exam_and_account_bg">#ffcc33</color>
     <color name="famous_book_bg">#9755f6</color>
     <color name="best_head_bg">#fe864b</color>

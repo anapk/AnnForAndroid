@@ -24,6 +24,11 @@
         <activity android:name=".pager.BizActivity" />
         <activity android:name=".pager.ZoneActivity" />
         <activity android:name=".qrcode.QrWebActivity" />
+        <activity android:name=".qrcode.MakeQRcodeActivity" />
+        <activity android:name=".qrcode.ScannerActivity" />
+        <activity android:name=".qrcode.ResultTextShowActivity" />
+        <activity android:name=".qrcode.ResultActivity" />
+        <activity android:name=".qrcode.QRcodeIndexActivity" />
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -31,4 +36,17 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+
 </manifest>

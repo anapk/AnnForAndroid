@@ -68,7 +68,7 @@
                         android:id="@+id/layout_exam"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/tab_menu_bg_height"
-                        android:background="@color/exam_and_account_bg"
+                        android:background="@color/ann_com"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -86,6 +86,7 @@
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
                         android:text="@string/exam_room"
+                        android:gravity="center"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
                 </RelativeLayout>
