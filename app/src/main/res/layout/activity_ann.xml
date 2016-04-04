@@ -85,7 +85,7 @@
                         android:layout_alignParentBottom="true"
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
-                        android:text="@string/exam_room"
+                        android:text="@string/ann_partner"
                         android:gravity="center"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
@@ -126,7 +126,7 @@
                         android:layout_alignParentBottom="true"
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
-                        android:text="@string/famous_book"
+                        android:text="@string/ann_edu"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
                 </RelativeLayout>
@@ -174,7 +174,7 @@
                         android:layout_alignParentBottom="true"
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
-                        android:text="@string/user_manager"
+                        android:text="@string/ann_server_admin"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
                 </RelativeLayout>
@@ -206,7 +206,7 @@
                         android:layout_alignParentBottom="true"
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
-                        android:text="@string/add_account"
+                        android:text="@string/ann_website_admin"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
                 </RelativeLayout>
@@ -238,7 +238,7 @@
                         android:layout_alignParentBottom="true"
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
-                        android:text="@string/my_download"
+                        android:text="@string/ann_shop_admin"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
                 </RelativeLayout>

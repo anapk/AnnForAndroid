@@ -15,6 +15,18 @@
     <string name="home_menu_news">动态</string>
     <string name="home_menu_welfare">福利</string>
 
+    <string name="ann_ecommerece">电商服务</string>
+    <string name="ann_partner">合伙企业</string>
+    <string name="ann_genius">专注领域</string>
+    <string name="ann_develop">网站建设、APP开发、微信开发</string>
+    <string name="ann_webdev">网站建设</string>
+    <string name="ann_server_admin">服务器管理</string>
+    <string name="ann_website_admin">网站管理</string>
+    <string name="ann_shop_admin">网店管理</string>
+    <string name="ann_edu">安浪教育</string>
+    <string name="ann_vip">商业客户</string>
+
+
     <string name="syn_tech">领先技术</string>
     <string name="exam_room">模拟考场</string>
     <string name="famous_book">安浪教程</string>
@@ -22,7 +34,7 @@
     <string name="user_manager">系统帐户</string>
     <string name="add_account">账戶充值</string>
     <string name="my_download">云数据</string>
-    <string name="sys_setting">系統設置</string>
+    <string name="sys_setting">系统设置</string>
     <string name="about_us">关于我们</string>
     <string name="exception_timeout">网络超时</string>
     <string name="exception_parse">解析数据异常</string>

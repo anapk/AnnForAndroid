@@ -111,11 +111,11 @@ public final class ScannerActivity extends Activity implements SurfaceHolder.Cal
             switch (msg.what) {
                 case PARSE_BARCODE_SUC: // 解析图片成功
                     Toast.makeText(activityReference.get(),
-                            "解析成功，结果为：" + msg.obj, Toast.LENGTH_SHORT).show();
+                            "解析成功，结果为：" + msg.obj, Toast.LENGTH_LONG).show();
                     break;
                 case PARSE_BARCODE_FAIL:// 解析图片失败
                     Toast.makeText(activityReference.get(), "解析图片失败",
-                            Toast.LENGTH_SHORT).show();
+                            Toast.LENGTH_LONG).show();
                     break;
 
                 default:

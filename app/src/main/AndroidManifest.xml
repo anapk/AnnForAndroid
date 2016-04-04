@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.anline.www">
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,11 +32,18 @@
         <activity android:name=".pager.ZoneActivity" />
         <activity android:name=".qrcode.QrWebActivity" />
         <activity android:name=".qrcode.MakeQRcodeActivity" />
-        <activity android:name=".qrcode.ScannerActivity" />
+        <activity
+            android:name=".qrcode.ScannerActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".qrcode.ResultTextShowActivity" />
-        <activity android:name=".qrcode.ResultActivity" />
+        <activity
+            android:name=".qrcode.ResultActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".qrcode.QRcodeIndexActivity" />
     </application>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -37,6 +51,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
     <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>

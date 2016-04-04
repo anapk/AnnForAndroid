@@ -39,7 +39,7 @@
         android:layout_alignParentBottom="true"
         android:paddingBottom="@dimen/main_title_text_padding"
         android:paddingLeft="@dimen/main_title_text_padding"
-        android:text="@string/best_head"
+        android:text="@string/ann_vip"
         android:textColor="@color/white"
         android:textSize="@dimen/main_title_text_size" />
 
