@@ -95,9 +95,9 @@ public class HomeActivity extends Activity {
             int currentPage = 0;
             final int SHOW_NEXT = 0011;
             final boolean showNext = true;
-            final boolean isRun = true;
+            boolean isRun = true;
+            boolean isThRun = true;
             Handler mHandler = new Handler(){
-
 
                 @Override
                 public void handleMessage(Message msg) {
@@ -242,7 +242,11 @@ public class HomeActivity extends Activity {
                         }
                     });
                     displayRatio_selelct(currentPage);
-                    thread.start();
+//                    boolean isThRun = false;
+                    if(isThRun) {
+                        thread.start();
+                        isThRun = false;
+                    }
 
                     MyScrollView myScrollView = (MyScrollView) findViewById(R.id.find_scrollView);
                     myScrollView.setOnTouchListener(new View.OnTouchListener() {
