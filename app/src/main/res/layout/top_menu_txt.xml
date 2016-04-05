@@ -16,7 +16,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:paddingLeft="10dp"
-            android:text="发现"
+            android:text="会员中心"
             android:textColor="@color/tv_Black"
             android:textSize="20sp" />
         <TextView

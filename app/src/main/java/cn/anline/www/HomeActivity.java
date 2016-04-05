@@ -6,14 +6,20 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -27,6 +33,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+import android.widget.ViewFlipper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,6 +90,55 @@ public class HomeActivity extends Activity {
         //填充ViewPager的数据适配器
         PagerAdapter mPagerAdapter = new PagerAdapter()
         {
+            ViewFlipper viewFlipper;
+            GestureDetector mGestureDetector;
+            int currentPage = 0;
+            final int SHOW_NEXT = 0011;
+            final boolean showNext = true;
+            final boolean isRun = true;
+            Handler mHandler = new Handler(){
+
+
+                @Override
+                public void handleMessage(Message msg) {
+                    // TODO Auto-generated method stub
+                    switch (msg.what) {
+                        case SHOW_NEXT:
+                            if (showNext) {
+                                showNextView();
+                            } else {
+                                showPreviousView();
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+
+            };
+            Thread thread = new Thread(){
+
+                @Override
+                public void run() {
+                    // TODO Auto-generated method stub
+                    while(isRun){
+                        try {
+                            Thread.sleep(1000 * 8);
+                            Message msg = new Message();
+                            msg.what = SHOW_NEXT;
+                            mHandler.sendMessage(msg);
+                        } catch (InterruptedException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+            };
+
+            //结束必须在onCreat类申明的内容
+
             @Override
             public boolean isViewFromObject(View arg0, Object arg1) {
                 return arg0 == arg1;
@@ -102,6 +158,8 @@ public class HomeActivity extends Activity {
             public Object instantiateItem(View container, int position) {
                 ((ViewPager)container).addView(views.get(position));
                 if(position == 0) {//第一个页面的控件监听
+
+
                     EditText edit_search;
                     ImageView iv_qrscan;
                     iv_qrscan = (ImageView) findViewById(R.id.scan_qrcode);
@@ -124,6 +182,7 @@ public class HomeActivity extends Activity {
 
                 }
                 if(position == 1){//第2个页面的控件监听
+
                     Button serviceButton = (Button) findViewById(R.id.service_button);
                     serviceButton.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -134,16 +193,72 @@ public class HomeActivity extends Activity {
 
                 }
                 if(position == 2){//第3个页面的控件监听
-                    Button findButton = (Button) findViewById(R.id.find_button);
-                    findButton.setOnClickListener(new View.OnClickListener() {
+
+
+
+                    viewFlipper = (ViewFlipper) findViewById(R.id.mViewFliper_vf);
+                    mGestureDetector = new GestureDetector(new GestureDetector.OnGestureListener() {
                         @Override
-                        public void onClick(View v) {
-                            Toast.makeText(getApplicationContext(),"发现新大陆",Toast.LENGTH_LONG).show();
+                        public boolean onDown(MotionEvent e) {
+                            return false;
+                        }
+
+                        @Override
+                        public void onShowPress(MotionEvent e) {
+
+                        }
+
+                        @Override
+                        public boolean onSingleTapUp(MotionEvent e) {
+                            return false;
+                        }
+
+                        @Override
+                        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+                            return false;
+                        }
+
+                        @Override
+                        public void onLongPress(MotionEvent e) {
+
+                        }
+
+                        @Override
+                        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                            return false;
                         }
                     });
+                    viewFlipper.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            return false;
+                        }
+                    });
+                    viewFlipper.setLongClickable(true);
+                    viewFlipper.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                        }
+                    });
+                    displayRatio_selelct(currentPage);
+                    thread.start();
+
+                    MyScrollView myScrollView = (MyScrollView) findViewById(R.id.find_scrollView);
+                    myScrollView.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            return false;
+                        }
+                    });
+                    myScrollView.setGestureDetector(mGestureDetector);
+
+
+
 
                 }
                 if(position == 3){//第4个页面的控件监听
+
                     Button bizButton = (Button) findViewById(R.id.biz_button);
                     bizButton.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -154,9 +269,59 @@ public class HomeActivity extends Activity {
                 }
                 if(position == 4){//第5个页面的控件监听
 
+
                 }
+
+
                 return views.get(position);
             }
+
+            private void displayRatio_selelct(int id){
+                int[] ratioId = {R.id.home_ratio_img_04, R.id.home_ratio_img_03, R.id.home_ratio_img_02, R.id.home_ratio_img_01};
+                ImageView img = (ImageView)findViewById(ratioId[id]);
+                img.setSelected(true);
+            }
+
+            private void displayRatio_normal(int id){
+                int[] ratioId = {R.id.home_ratio_img_04, R.id.home_ratio_img_03, R.id.home_ratio_img_02, R.id.home_ratio_img_01};
+                ImageView img = (ImageView)findViewById(ratioId[id]);
+                img.setSelected(false);
+            }
+            private void showNextView(){
+
+                viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_left_in));
+                viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_left_out));
+                viewFlipper.showNext();
+                currentPage ++;
+                if (currentPage == viewFlipper.getChildCount()) {
+                    displayRatio_normal(currentPage - 1);
+                    currentPage = 0;
+                    displayRatio_selelct(currentPage);
+                } else {
+                    displayRatio_selelct(currentPage);
+                    displayRatio_normal(currentPage - 1);
+                }
+                Log.e("currentPage", currentPage + "");
+
+            }
+            private void showPreviousView(){
+                displayRatio_selelct(currentPage);
+                viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_right_in));
+                viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_right_out));
+                viewFlipper.showPrevious();
+                currentPage --;
+                if (currentPage == -1) {
+                    displayRatio_normal(currentPage + 1);
+                    currentPage = viewFlipper.getChildCount() - 1;
+                    displayRatio_selelct(currentPage);
+                } else {
+                    displayRatio_selelct(currentPage);
+                    displayRatio_normal(currentPage + 1);
+                }
+                Log.e("currentPage", currentPage + "");
+            }
+
+
         };
         mTabPager.setAdapter(mPagerAdapter);
 
