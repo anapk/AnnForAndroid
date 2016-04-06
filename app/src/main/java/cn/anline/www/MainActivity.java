@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Handler x = new Handler();
-        x.postDelayed(new splashhandler(), 2000);
+        x.postDelayed(new splashhandler(), 3000);
     }
     class splashhandler implements Runnable{
         public void run() {

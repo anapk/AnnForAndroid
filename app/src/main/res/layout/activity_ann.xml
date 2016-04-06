@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ann_bg"
-    tools:context="cn.anline.www.pager.AnnActivity">
+    tools:context="cn.anline.www.HomeActivity">
 
     <include layout="@layout/top_menu"
         android:id="@+id/top_menu"/>

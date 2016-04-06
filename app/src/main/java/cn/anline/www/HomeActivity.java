@@ -90,54 +90,6 @@ public class HomeActivity extends Activity {
         //填充ViewPager的数据适配器
         PagerAdapter mPagerAdapter = new PagerAdapter()
         {
-            ViewFlipper viewFlipper;
-            GestureDetector mGestureDetector;
-            int currentPage = 0;
-            final int SHOW_NEXT = 0011;
-            final boolean showNext = true;
-            boolean isRun = true;
-            boolean isThRun = true;
-            Handler mHandler = new Handler(){
-
-                @Override
-                public void handleMessage(Message msg) {
-                    // TODO Auto-generated method stub
-                    switch (msg.what) {
-                        case SHOW_NEXT:
-                            if (showNext) {
-                                showNextView();
-                            } else {
-                                showPreviousView();
-                            }
-                            break;
-
-                        default:
-                            break;
-                    }
-                }
-
-            };
-            Thread thread = new Thread(){
-
-                @Override
-                public void run() {
-                    // TODO Auto-generated method stub
-                    while(isRun){
-                        try {
-                            Thread.sleep(1000 * 8);
-                            Message msg = new Message();
-                            msg.what = SHOW_NEXT;
-                            mHandler.sendMessage(msg);
-                        } catch (InterruptedException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                    }
-                }
-
-            };
-
-            //结束必须在onCreat类申明的内容
 
             @Override
             public boolean isViewFromObject(View arg0, Object arg1) {
@@ -196,68 +148,6 @@ public class HomeActivity extends Activity {
 
 
 
-                    viewFlipper = (ViewFlipper) findViewById(R.id.mViewFliper_vf);
-                    mGestureDetector = new GestureDetector(new GestureDetector.OnGestureListener() {
-                        @Override
-                        public boolean onDown(MotionEvent e) {
-                            return false;
-                        }
-
-                        @Override
-                        public void onShowPress(MotionEvent e) {
-
-                        }
-
-                        @Override
-                        public boolean onSingleTapUp(MotionEvent e) {
-                            return false;
-                        }
-
-                        @Override
-                        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-                            return false;
-                        }
-
-                        @Override
-                        public void onLongPress(MotionEvent e) {
-
-                        }
-
-                        @Override
-                        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-                            return false;
-                        }
-                    });
-                    viewFlipper.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            return false;
-                        }
-                    });
-                    viewFlipper.setLongClickable(true);
-                    viewFlipper.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-
-                        }
-                    });
-                    displayRatio_selelct(currentPage);
-//                    boolean isThRun = false;
-                    if(isThRun) {
-                        thread.start();
-                        isThRun = false;
-                    }
-
-                    MyScrollView myScrollView = (MyScrollView) findViewById(R.id.find_scrollView);
-                    myScrollView.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            return false;
-                        }
-                    });
-                    myScrollView.setGestureDetector(mGestureDetector);
-
-
 
 
                 }
@@ -280,50 +170,7 @@ public class HomeActivity extends Activity {
                 return views.get(position);
             }
 
-            private void displayRatio_selelct(int id){
-                int[] ratioId = {R.id.home_ratio_img_04, R.id.home_ratio_img_03, R.id.home_ratio_img_02, R.id.home_ratio_img_01};
-                ImageView img = (ImageView)findViewById(ratioId[id]);
-                img.setSelected(true);
-            }
 
-            private void displayRatio_normal(int id){
-                int[] ratioId = {R.id.home_ratio_img_04, R.id.home_ratio_img_03, R.id.home_ratio_img_02, R.id.home_ratio_img_01};
-                ImageView img = (ImageView)findViewById(ratioId[id]);
-                img.setSelected(false);
-            }
-            private void showNextView(){
-
-                viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_left_in));
-                viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_left_out));
-                viewFlipper.showNext();
-                currentPage ++;
-                if (currentPage == viewFlipper.getChildCount()) {
-                    displayRatio_normal(currentPage - 1);
-                    currentPage = 0;
-                    displayRatio_selelct(currentPage);
-                } else {
-                    displayRatio_selelct(currentPage);
-                    displayRatio_normal(currentPage - 1);
-                }
-                Log.e("currentPage", currentPage + "");
-
-            }
-            private void showPreviousView(){
-                displayRatio_selelct(currentPage);
-                viewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_right_in));
-                viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.push_right_out));
-                viewFlipper.showPrevious();
-                currentPage --;
-                if (currentPage == -1) {
-                    displayRatio_normal(currentPage + 1);
-                    currentPage = viewFlipper.getChildCount() - 1;
-                    displayRatio_selelct(currentPage);
-                } else {
-                    displayRatio_selelct(currentPage);
-                    displayRatio_normal(currentPage + 1);
-                }
-                Log.e("currentPage", currentPage + "");
-            }
 
 
         };

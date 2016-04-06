@@ -4,71 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/find_bg"
-    tools:context="cn.anline.www.pager.FindActivity">
+    tools:context="cn.anline.www.HomeActivity">
 
     <include layout="@layout/top_menu_txt"
         android:id="@+id/find_include_top" />
-    <cn.anline.www.MyScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/find_scrollView"
-        android:scrollbars="none"
-        android:focusable="false"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/find_include_top">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ViewFlipper
-                android:id="@+id/mViewFliper_vf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="160dip"
-                        android:background="@drawable/default_pic_1"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="160dip"
-                        android:background="@drawable/default_pic_2"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="160dip"
-                        android:background="@drawable/default_pic_3"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="160dip"
-                        android:background="@drawable/default_pic_4"/>
-                </LinearLayout>
-
-            </ViewFlipper>
-            <LinearLayout
-                android:id="@+id/home_date_ratio_ly"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/mViewFliper_vf">
-                <include  layout="@layout/nav_status_bar"/>
-            </LinearLayout>
-            </RelativeLayout>
-    </cn.anline.www.MyScrollView>
 </RelativeLayout>
