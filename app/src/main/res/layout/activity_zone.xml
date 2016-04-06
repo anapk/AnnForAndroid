@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/zone_bg"
-    tools:context="cn.anline.www.HomeActivity">
+    tools:context="cn.anline.www.pager.ZoneActivity">
 
     <include layout="@layout/top_menu_txt"
         android:id="@+id/include" />

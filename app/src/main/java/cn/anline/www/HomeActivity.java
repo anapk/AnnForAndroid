@@ -114,7 +114,9 @@ public class HomeActivity extends Activity {
 
                     EditText edit_search;
                     ImageView iv_qrscan;
+                    ImageView iv_voice;
                     iv_qrscan = (ImageView) findViewById(R.id.scan_qrcode);
+                    iv_voice = (ImageView) findViewById(R.id.scan_voice);
                     iv_qrscan.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -127,21 +129,21 @@ public class HomeActivity extends Activity {
                     edit_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
                         @Override
                         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                            Toast.makeText(getApplicationContext(), "搜索失效", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "没有搜索到相关内容", Toast.LENGTH_SHORT).show();
                             return false;
+                        }
+                    });
+                    iv_voice.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(),"语音识别",Toast.LENGTH_SHORT).show();
                         }
                     });
 
                 }
                 if(position == 1){//第2个页面的控件监听
 
-                    Button serviceButton = (Button) findViewById(R.id.service_button);
-                    serviceButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Toast.makeText(getApplicationContext(),"暂时没有可提供服务",Toast.LENGTH_LONG).show();
-                        }
-                    });
+
 
                 }
                 if(position == 2){//第3个页面的控件监听
@@ -153,13 +155,7 @@ public class HomeActivity extends Activity {
                 }
                 if(position == 3){//第4个页面的控件监听
 
-                    Button bizButton = (Button) findViewById(R.id.biz_button);
-                    bizButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Toast.makeText(getApplicationContext(),"欢迎商家加盟",Toast.LENGTH_LONG).show();
-                        }
-                    });
+
                 }
                 if(position == 4){//第5个页面的控件监听
 

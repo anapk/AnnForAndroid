@@ -4,15 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/service_bg"
-    tools:context="cn.anline.www.HomeActivity">
+    tools:context="cn.anline.www.pager.ServiceActivity">
 
     <include layout="@layout/top_menu_txt"
         android:id="@+id/service_include_top" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="服务"
-        android:id="@+id/service_button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
