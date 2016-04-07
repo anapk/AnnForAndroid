@@ -9,6 +9,149 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/webView_qrweb"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_Gray_light"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/web_back"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/qrcode_web_back"
+                android:id="@+id/qrcode_web_back" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg_White" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/web_forward"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/qrcode_web_forward"
+                android:id="@+id/qrcode_web_forward" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg_White" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/web_share_qq"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/share_qq"
+                android:id="@+id/share_qq" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg_White" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/web_share_qzone"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/share_qzone"
+                android:id="@+id/share_qzone" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg_White" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/web_share_wechat"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/share_wechat"
+                android:id="@+id/share_wechat" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg_White" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/web_share_timeline"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/share_timeline"
+                android:id="@+id/share_timeline" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/bg_White" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/web_share_weibo"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/share_weibo"
+                android:id="@+id/share_weibo" />
+
+        </LinearLayout>
+
+        </LinearLayout>
 </RelativeLayout>

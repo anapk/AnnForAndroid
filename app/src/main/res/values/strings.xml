@@ -25,6 +25,15 @@
     <string name="ann_shop_admin">网店管理</string>
     <string name="ann_edu">安浪教育</string>
     <string name="ann_vip">商业客户</string>
+    <string name="ann_wexin_admin">微信管理</string>
+
+    <string name="web_back">后退</string>
+    <string name="web_forward">前进</string>
+    <string name="web_share_qq">分享给QQ好友</string>
+    <string name="web_share_qzone">分享到QQ空间</string>
+    <string name="web_share_wechat">分享给微信好友</string>
+    <string name="web_share_timeline">分享到朋友圈</string>
+    <string name="web_share_weibo">分享到新浪微博</string>
 
 
     <string name="syn_tech">领先技术</string>

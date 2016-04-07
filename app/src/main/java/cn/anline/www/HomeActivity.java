@@ -27,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
@@ -39,6 +40,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import cn.anline.www.ann.OfficeWebsiteActivity;
 import cn.anline.www.qrcode.ScannerActivity;
 
 public class HomeActivity extends Activity {
@@ -113,8 +115,9 @@ public class HomeActivity extends Activity {
 
 
                     EditText edit_search;
-                    ImageView iv_qrscan;
-                    ImageView iv_voice;
+                    ImageView iv_qrscan,iv_voice,home_menu1_iv;
+                    TextView home_menu1_tv;
+                    LinearLayout home_menu1;
                     iv_qrscan = (ImageView) findViewById(R.id.scan_qrcode);
                     iv_voice = (ImageView) findViewById(R.id.scan_voice);
                     iv_qrscan.setOnClickListener(new View.OnClickListener() {
@@ -136,10 +139,36 @@ public class HomeActivity extends Activity {
                     iv_voice.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Toast.makeText(getApplicationContext(),"语音识别",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "语音识别", Toast.LENGTH_SHORT).show();
                         }
                     });
+                    home_menu1 = (LinearLayout) findViewById(R.id.home_menu1);
+                    home_menu1_iv = (ImageView) findViewById(R.id.home_menu1_iv);
+                    home_menu1_tv = (TextView) findViewById(R.id.home_menu1_tv);
 
+
+
+                    home_menu1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            goOfficeWebsite();
+
+                        }
+                    });
+                    home_menu1_iv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            goOfficeWebsite();
+
+                        }
+                    });
+                    home_menu1_tv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            goOfficeWebsite();
+
+                        }
+                    });
                 }
                 if(position == 1){//第2个页面的控件监听
 
@@ -166,7 +195,10 @@ public class HomeActivity extends Activity {
                 return views.get(position);
             }
 
-
+            private void goOfficeWebsite(){
+                Intent officWebSiteIntent = new Intent(getApplicationContext(), OfficeWebsiteActivity.class);
+                startActivity(officWebSiteIntent);
+            }
 
 
         };

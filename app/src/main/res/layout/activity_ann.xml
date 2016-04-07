@@ -39,7 +39,7 @@
                 android:layout_marginLeft="@dimen/main_layout_margin"
                 android:layout_marginRight="@dimen/main_layout_margin"
                 android:layout_weight="1"
-                layout="@layout/view_head_ad" />
+                layout="@layout/ann_view_head_menu" />
 
 
             <LinearLayout
@@ -55,7 +55,7 @@
                     android:layout_marginLeft="@dimen/main_layout_margin"
                     android:layout_marginRight="@dimen/main_button_margin"
                     android:layout_weight="1"
-                    layout="@layout/view_syn_tech" />
+                    layout="@layout/ann_view_focus_objective" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/exam_selector"
+                            android:background="@drawable/ann_partner_selector"
                             android:contentDescription="@string/app_name" />
                     </LinearLayout>
 
@@ -116,7 +116,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/famous_book_selector"
+                            android:background="@drawable/ann_myshop_selector"
                             android:contentDescription="@string/app_name" />
                     </LinearLayout>
 
@@ -126,7 +126,7 @@
                         android:layout_alignParentBottom="true"
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
-                        android:text="@string/ann_edu"
+                        android:text="@string/ann_shop_admin"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
                 </RelativeLayout>
@@ -137,7 +137,7 @@
                     android:layout_marginLeft="@dimen/main_button_margin"
                     android:layout_marginRight="@dimen/main_layout_margin"
                     android:layout_weight="1"
-                    layout="@layout/view_best_head" />
+                    layout="@layout/ann_view_vip_custom" />
             </LinearLayout>
 
             <LinearLayout
@@ -164,7 +164,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/user_selector"
+                            android:background="@drawable/ann_server_admin_selector"
                             android:contentDescription="@string/app_name" />
                     </LinearLayout>
 
@@ -196,7 +196,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/money_selector"
+                            android:background="@drawable/ann_web_admin"
                             android:contentDescription="@string/app_name" />
                     </LinearLayout>
 
@@ -228,7 +228,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/my_download_selector"
+                            android:background="@drawable/ann_weixin_admin_selector"
                             android:contentDescription="@string/app_name" />
                     </LinearLayout>
 
@@ -238,7 +238,7 @@
                         android:layout_alignParentBottom="true"
                         android:paddingBottom="@dimen/main_title_text_padding"
                         android:paddingLeft="@dimen/main_title_text_padding"
-                        android:text="@string/ann_shop_admin"
+                        android:text="@string/ann_wexin_admin"
                         android:textColor="@color/white"
                         android:textSize="@dimen/main_title_text_size" />
                 </RelativeLayout>
