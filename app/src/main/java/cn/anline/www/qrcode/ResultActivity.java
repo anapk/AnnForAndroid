@@ -13,6 +13,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzoneShare;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
@@ -26,6 +27,7 @@ import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -202,13 +204,12 @@ public void onComplete(Object o) {
     private void shareToQZone(){
         Bundle bundle = new Bundle();
 
-        bundle.putString(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, "安浪APP");
-
         bundle.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, webView.getUrl());
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_TITLE, webView.getTitle());
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_IMAGE_URL, Constants.LogoURL);
+
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, "安浪创想网：从事互联网技术产品开发，专注于信息技术领域的高端商业资源开发，技术型、创新型、公益性网站，欢迎合作、共赢！");
 
@@ -216,24 +217,22 @@ public void onComplete(Object o) {
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_APP_NAME, "安浪创想");
 
-        mTencent.shareToQzone(this, bundle, this);
+        mTencent.shareToQzone(this,bundle,this);
     }
     private void shareToQQ(){
         Bundle bundle = new Bundle();
 
-        bundle.putString(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, "");
+        bundle.putString(QQShare.SHARE_TO_QQ_TARGET_URL, webView.getUrl());
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, webView.getUrl());
+        bundle.putString(QQShare.SHARE_TO_QQ_TITLE, webView.getTitle());
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_TITLE, webView.getTitle());
+        bundle.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, Constants.LogoURL);
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_IMAGE_URL, Constants.LogoURL);
+        bundle.putString(QQShare.SHARE_TO_QQ_SUMMARY, "安浪创想网：从事互联网技术产品开发，专注于信息技术领域的高端商业资源开发，技术型、创新型、公益性网站，欢迎合作、共赢！");
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, "安浪创想网：从事互联网技术产品开发，专注于信息技术领域的高端商业资源开发，技术型、创新型、公益性网站，欢迎合作、共赢！");
+        bundle.putString(QQShare.SHARE_TO_QQ_SITE, "安浪创想网");
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_SITE, "安浪创想网");
-
-        bundle.putString(QzoneShare.SHARE_TO_QQ_APP_NAME, "安浪创想");
+        bundle.putString(QQShare.SHARE_TO_QQ_APP_NAME, "安浪创想");
 
         mTencent.shareToQQ(this, bundle, this);
     }

@@ -12,6 +12,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzoneShare;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
@@ -21,10 +22,12 @@ import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.tencent.open.utils.ThreadManager;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
 
+import cn.anline.www.MainActivity;
 import cn.anline.www.R;
 import cn.anline.www.wxapi.Constants;
 import cn.anline.www.wxapi.Util;
@@ -34,7 +37,6 @@ public class OfficeWebsiteActivity extends Activity implements IWXAPIEventHandle
     private long exitTime = 0;
     private IWXAPI api;
     public static Tencent mTencent;
-    private int shareType = QzoneShare.SHARE_TO_QZONE_TYPE_IMAGE_TEXT;
     private WebView annWebView;
     private ImageView ann_office_web_back,ann_office_web_forward,ann_office_share_qq,ann_office_share_qzone,ann_office_share_wechat,ann_office_share_timeline,ann_office_share_weibo;
     @Override
@@ -181,8 +183,6 @@ public class OfficeWebsiteActivity extends Activity implements IWXAPIEventHandle
     private void shareToQZone(){
         Bundle bundle = new Bundle();
 
-        bundle.putString(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, "安浪APP");
-
         bundle.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, annWebView.getUrl());
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_TITLE, annWebView.getTitle());
@@ -191,33 +191,32 @@ public class OfficeWebsiteActivity extends Activity implements IWXAPIEventHandle
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, "安浪创想网：从事互联网技术产品开发，专注于信息技术领域的高端商业资源开发，技术型、创新型、公益性网站，欢迎合作、共赢！");
 
-        bundle.putString(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, "分享的类型");
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_SITE, "安浪创想网");
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_APP_NAME, "安浪创想");
 
-        mTencent.shareToQzone(this, bundle, this);
+            mTencent.shareToQzone(this,bundle,this);
+
     }
     private void shareToQQ(){
         Bundle bundle = new Bundle();
 
-        bundle.putString(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, "安浪APP");
+        bundle.putString(QQShare.SHARE_TO_QQ_TARGET_URL, annWebView.getUrl());
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, annWebView.getUrl());
+        bundle.putString(QQShare.SHARE_TO_QQ_TITLE, annWebView.getTitle());
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_TITLE, annWebView.getTitle());
+        bundle.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, Constants.LogoURL);
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_IMAGE_URL, Constants.LogoURL);
+        bundle.putString(QQShare.SHARE_TO_QQ_SUMMARY, "安浪创想网：从事互联网技术产品开发，专注于信息技术领域的高端商业资源开发，技术型、创新型、公益性网站，欢迎合作、共赢！");
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, "安浪创想网：从事互联网技术产品开发，专注于信息技术领域的高端商业资源开发，技术型、创新型、公益性网站，欢迎合作、共赢！");
+        bundle.putString(QQShare.SHARE_TO_QQ_SITE, "安浪创想网");
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_SITE, "安浪创想网");
-
-        bundle.putString(QzoneShare.SHARE_TO_QQ_APP_NAME, "安浪创想");
+        bundle.putString(QQShare.SHARE_TO_QQ_APP_NAME, "安浪创想");
 
         mTencent.shareToQQ(this, bundle, this);
     }
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
