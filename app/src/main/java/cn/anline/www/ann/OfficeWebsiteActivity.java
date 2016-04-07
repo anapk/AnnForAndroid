@@ -22,12 +22,12 @@ import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import com.tencent.open.utils.ThreadManager;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
 
-import cn.anline.www.MainActivity;
+import java.util.ArrayList;
+
 import cn.anline.www.R;
 import cn.anline.www.wxapi.Constants;
 import cn.anline.www.wxapi.Util;
@@ -183,20 +183,22 @@ public class OfficeWebsiteActivity extends Activity implements IWXAPIEventHandle
     private void shareToQZone(){
         Bundle bundle = new Bundle();
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, annWebView.getUrl());
-
         bundle.putString(QzoneShare.SHARE_TO_QQ_TITLE, annWebView.getTitle());
 
-        bundle.putString(QzoneShare.SHARE_TO_QQ_IMAGE_URL, Constants.LogoURL);
-
         bundle.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, "安浪创想网：从事互联网技术产品开发，专注于信息技术领域的高端商业资源开发，技术型、创新型、公益性网站，欢迎合作、共赢！");
+
+        bundle.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, annWebView.getUrl());
+
+        ArrayList<String> imageUrls = new ArrayList<String>();
+        imageUrls.add(Constants.LogoURL);
+        bundle.putStringArrayList(QzoneShare.SHARE_TO_QQ_IMAGE_URL, imageUrls);
 
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_SITE, "安浪创想网");
 
         bundle.putString(QzoneShare.SHARE_TO_QQ_APP_NAME, "安浪创想");
 
-            mTencent.shareToQzone(this,bundle,this);
+        mTencent.shareToQzone(this,bundle,this);
 
     }
     private void shareToQQ(){
