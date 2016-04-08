@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tencent.connect.share.QzonePublish;
 import com.tencent.connect.share.QzoneShare;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
@@ -103,10 +104,11 @@ public class ZbQZoneActivity extends Activity implements View.OnClickListener,IW
 
 //                bundle.putString(QzoneShare.SHARE_TO_QQ_TITLE, "");
 
-//                bundle.putInt(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, shareType);
+                bundle.putInt(QzonePublish.PUBLISH_TO_QZONE_KEY_TYPE, QzonePublish.PUBLISH_TO_QZONE_TYPE_PUBLISHMOOD);
 
-                bundle.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, summary.getText().toString());
+                bundle.putString(QzonePublish.PUBLISH_TO_QZONE_SUMMARY, summary.getText().toString());
 
+                bundle.putString(QzonePublish.PUBLISH_TO_QZONE_APP_NAME,"安浪创想");
 //                bundle.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, "");
 
                 ArrayList<String> imageUrls = new ArrayList<String>();
@@ -116,7 +118,7 @@ public class ZbQZoneActivity extends Activity implements View.OnClickListener,IW
                     imageUrls.add(editText.getText().toString());
                 }
 
-                bundle.putStringArrayList(QzoneShare.SHARE_TO_QQ_IMAGE_URL, imageUrls);
+                bundle.putStringArrayList(QzonePublish.PUBLISH_TO_QZONE_IMAGE_URL, imageUrls);
 
 //                bundle.putString(QzoneShare.SHARE_TO_QQ_SITE, "安浪创想网");
 
