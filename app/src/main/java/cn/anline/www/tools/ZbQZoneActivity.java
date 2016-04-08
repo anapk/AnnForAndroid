@@ -71,6 +71,8 @@ public class ZbQZoneActivity extends Activity implements View.OnClickListener,IW
         zbWechat.setOnClickListener(this);
         zbTimeline.setOnClickListener(this);
         zbWeibo.setOnClickListener(this);
+
+        api.handleIntent(getIntent(), this);
     }
 
     @Override
