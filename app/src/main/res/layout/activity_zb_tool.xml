@@ -18,7 +18,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         android:id="@+id/image_add"
         android:layout_above="@+id/zb_toolbar"
         android:background="@color/font_tab_unselected_color"
