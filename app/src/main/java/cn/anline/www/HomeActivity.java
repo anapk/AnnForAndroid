@@ -42,6 +42,7 @@ import java.util.Map;
 
 import cn.anline.www.ann.OfficeWebsiteActivity;
 import cn.anline.www.qrcode.ScannerActivity;
+import cn.anline.www.tools.ZbQZoneActivity;
 
 public class HomeActivity extends Activity {
     private ViewPager mTabPager;
@@ -115,9 +116,9 @@ public class HomeActivity extends Activity {
 
 
                     EditText edit_search;
-                    ImageView iv_qrscan,iv_voice,home_menu1_iv;
-                    TextView home_menu1_tv;
-                    LinearLayout home_menu1;
+                    ImageView iv_qrscan,iv_voice,home_menu1_iv,home_menu5_iv;
+                    TextView home_menu1_tv,home_menu5_tv;
+                    LinearLayout home_menu1,home_menu5;
                     iv_qrscan = (ImageView) findViewById(R.id.scan_qrcode);
                     iv_voice = (ImageView) findViewById(R.id.scan_voice);
                     iv_qrscan.setOnClickListener(new View.OnClickListener() {
@@ -143,8 +144,14 @@ public class HomeActivity extends Activity {
                         }
                     });
                     home_menu1 = (LinearLayout) findViewById(R.id.home_menu1);
+                    home_menu5 = (LinearLayout) findViewById(R.id.home_menu5);
+
                     home_menu1_iv = (ImageView) findViewById(R.id.home_menu1_iv);
+                    home_menu5_iv = (ImageView) findViewById(R.id.home_menu5_iv);
+
+
                     home_menu1_tv = (TextView) findViewById(R.id.home_menu1_tv);
+                    home_menu5_tv = (TextView) findViewById(R.id.home_menu5_tv);
 
 
 
@@ -166,6 +173,27 @@ public class HomeActivity extends Activity {
                         @Override
                         public void onClick(View v) {
                             goOfficeWebsite();
+
+                        }
+                    });
+                    home_menu5.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            goZbTool();
+
+                        }
+                    });
+                    home_menu5_iv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            goZbTool();
+
+                        }
+                    });
+                    home_menu5_tv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            goZbTool();
 
                         }
                     });
@@ -198,6 +226,10 @@ public class HomeActivity extends Activity {
             private void goOfficeWebsite(){
                 Intent officWebSiteIntent = new Intent(getApplicationContext(), OfficeWebsiteActivity.class);
                 startActivity(officWebSiteIntent);
+            }
+            private void goZbTool(){
+                Intent zbToolIntent = new Intent(getApplicationContext(), ZbQZoneActivity.class);
+                startActivity(zbToolIntent);
             }
 
 
