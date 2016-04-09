@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:text="WWW.ANLINE.CN All Right Reserved"
-        android:textColor="@color/paink_bg"
+        android:textColor="#857f7f"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
