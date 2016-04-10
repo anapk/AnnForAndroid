@@ -6,7 +6,7 @@
     android:background="@drawable/find_bg"
     tools:context="cn.anline.www.pager.FindActivity">
 
-    <include layout="@layout/top_menu_txt"
+    <include layout="@layout/find_top_menu_layout"
         android:id="@+id/find_include_top" />
 
     <cn.anline.www.find.CircleMenuLayout
