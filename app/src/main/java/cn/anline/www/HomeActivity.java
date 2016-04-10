@@ -41,6 +41,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.anline.www.ann.OfficeWebsiteActivity;
+import cn.anline.www.find.CircleMenuLayout;
 import cn.anline.www.qrcode.ScannerActivity;
 import cn.anline.www.tools.ZbQZoneActivity;
 
@@ -93,6 +94,16 @@ public class HomeActivity extends Activity {
         //填充ViewPager的数据适配器
         PagerAdapter mPagerAdapter = new PagerAdapter()
         {
+            CircleMenuLayout mCircleMenuLayout;
+
+            String[] mItemTexts = new String[] { "安全中心 ", "特色服务", "投资理财",
+                    "转账汇款", "我的账户", "信用卡" };
+            int[] mItemImgs = new int[] { R.drawable.home_mbank_1_normal,
+                    R.drawable.home_mbank_2_normal, R.drawable.home_mbank_3_normal,
+                    R.drawable.home_mbank_4_normal, R.drawable.home_mbank_5_normal,
+                    R.drawable.home_mbank_6_normal };
+
+
 
             @Override
             public boolean isViewFromObject(View arg0, Object arg1) {
@@ -198,23 +209,50 @@ public class HomeActivity extends Activity {
                         }
                     });
                 }
-                if(position == 1){//第2个页面的控件监听
+                if(position == 1){//第2个页面的控件监听 服务
 
 
 
                 }
-                if(position == 2){//第3个页面的控件监听
+                if(position == 2){//第3个页面的控件监听 发现
+
+                    mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);
+                    mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);
+
+
+
+                    mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener()
+                    {
+
+                        @Override
+                        public void itemClick(View view, int pos)
+                        {
+                            Toast.makeText(getApplicationContext(), mItemTexts[pos],
+                                    Toast.LENGTH_SHORT).show();
+
+                        }
+
+                        @Override
+                        public void itemCenterClick(View view)
+                        {
+                            Toast.makeText(getApplicationContext(),
+                                    "you can do something just like ccb  ",
+                                    Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+
 
 
 
 
 
                 }
-                if(position == 3){//第4个页面的控件监听
+                if(position == 3){//第4个页面的控件监听 商业
 
 
                 }
-                if(position == 4){//第5个页面的控件监听
+                if(position == 4){//第5个页面的控件监听 空间
 
 
                 }

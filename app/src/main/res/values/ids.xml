@@ -22,5 +22,8 @@
     <item name="quit" type="id"/>
     <item name="restart_preview" type="id"/>
     <item name="return_scan_result" type="id"/>
+    <item name="id_circle_menu_item_image" type="id"/>
+    <item name="id_circle_menu_item_text" type="id"/>
+    <item name="id_circle_menu_item_center" type="id"/>
 
 </resources>
