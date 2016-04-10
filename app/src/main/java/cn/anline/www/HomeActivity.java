@@ -103,7 +103,7 @@ public class HomeActivity extends Activity {
                     R.drawable.home_mbank_4_normal, R.drawable.home_mbank_5_normal,
                     R.drawable.home_mbank_6_normal };
 
-
+            boolean isFindSetMenu = false;
 
             @Override
             public boolean isViewFromObject(View arg0, Object arg1) {
@@ -117,12 +117,14 @@ public class HomeActivity extends Activity {
 
             @Override
             public void destroyItem(View container, int position, Object object) {
-                ((ViewPager)container).removeView(views.get(position));
+                ((ViewPager) container).removeView(views.get(position));
             }
 
             @Override
             public Object instantiateItem(View container, int position) {
                 ((ViewPager)container).addView(views.get(position));
+
+
                 if(position == 0) {//第一个页面的控件监听
 
 
@@ -216,31 +218,33 @@ public class HomeActivity extends Activity {
                 }
                 if(position == 2){//第3个页面的控件监听 发现
 
-                    mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);
-                    mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);
 
+                    if (isFindSetMenu){
 
+                    }else {
 
-                    mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener()
-                    {
+                        mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);
+                        mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);
 
-                        @Override
-                        public void itemClick(View view, int pos)
-                        {
-                            Toast.makeText(getApplicationContext(), mItemTexts[pos],
-                                    Toast.LENGTH_SHORT).show();
+                        mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener() {
 
-                        }
+                            @Override
+                            public void itemClick(View view, int pos) {
+                                Toast.makeText(getApplicationContext(), mItemTexts[pos],
+                                        Toast.LENGTH_SHORT).show();
 
-                        @Override
-                        public void itemCenterClick(View view)
-                        {
-                            Toast.makeText(getApplicationContext(),
-                                    "you can do something just like ccb  ",
-                                    Toast.LENGTH_SHORT).show();
+                            }
 
-                        }
-                    });
+                            @Override
+                            public void itemCenterClick(View view) {
+                                Toast.makeText(getApplicationContext(),
+                                        "you can do something just like ccb  ",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+                        isFindSetMenu = true;
+                    }
 
 
 
