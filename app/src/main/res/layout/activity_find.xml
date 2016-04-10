@@ -14,12 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="100dp"
+        android:layout_below="@+id/find_include_top"
         android:background="@drawable/circle_bg3" >
 
         <RelativeLayout
             android:id="@id/id_circle_menu_item_center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="104.0dip"
