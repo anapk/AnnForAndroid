@@ -230,6 +230,7 @@ public class SSHClientActivity extends Activity implements View.OnClickListener 
                     @Override
                     public void run() {
                         mConnectStatus.setText("连接状态：未连接");
+                        mButton.setText("登录");
                     }
                 });
             }
@@ -241,6 +242,7 @@ public class SSHClientActivity extends Activity implements View.OnClickListener 
                     @Override
                     public void run() {
                         mConnectStatus.setText("连接状态：已连接");
+                        mButton.setText("已登录");
                     }
                 });
             }

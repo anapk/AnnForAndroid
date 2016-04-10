@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="0dp"
             android:orientation="horizontal">
 
             <Button
@@ -22,7 +22,6 @@
                 style="@style/buttonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:text="@string/sshconnect_btn" />
 
             <TextView
@@ -68,19 +67,28 @@
                 android:textColor="@color/cybergreen"
                 android:textCursorDrawable="@null" />
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
             <Button
                 android:id="@+id/sftpbutton"
                 style="@style/buttonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/filetransfer" />
 
             <Button
                 android:id="@+id/endsessionbutton"
                 style="@style/buttonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="End session" />
+                android:text="退出" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

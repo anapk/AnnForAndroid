@@ -91,7 +91,7 @@
     <string name="sshusername">用户名</string>
     <string name="sshhostname">主机名</string>
     <string name="sshpassword">密码</string>
-    <string name="sshconnect_btn">连接</string>
+    <string name="sshconnect_btn">登录</string>
     <string name="up">上传</string>
     <string name="taskfail">命令执行失败</string>
     <string name="filetransfer">文件传输</string>

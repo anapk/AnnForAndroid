@@ -15,7 +15,6 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/textviewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sshusername" />
@@ -23,14 +22,13 @@
         <EditText
             android:id="@+id/username"
             style="@style/editTextStyle"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:inputType="text"
             android:textCursorDrawable="@null" />
 
         <TextView
-            style="@style/textviewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sshhostname" />
@@ -38,22 +36,21 @@
         <EditText
             android:id="@+id/hostname"
             style="@style/editTextStyle"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:inputType="text"
             android:textCursorDrawable="@null" />
 
         <TextView
-            style="@style/textviewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="port" />
+            android:text="端口" />
 
         <EditText
             android:id="@+id/portnum"
             style="@style/editTextStyle"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:inputType="number"
@@ -61,7 +58,6 @@
             android:textCursorDrawable="@null" />
 
         <TextView
-            style="@style/textviewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sshpassword" />
@@ -69,7 +65,7 @@
         <EditText
             android:id="@+id/password"
             style="@style/editTextStyle"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:inputType="textPassword"
@@ -78,14 +74,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/enterbutton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/sshconnect_btn" />
+                android:text="@string/sshconnect_btn"
+                style="@style/buttonStyle"
+                android:layout_weight="0.20" />
 
         </LinearLayout>
     </LinearLayout>
