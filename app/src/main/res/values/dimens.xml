@@ -43,4 +43,9 @@
     <dimen name="txt_h3">17dp</dimen>
     <dimen name="txt_h4">15dp</dimen>
     <dimen name="txt_h5">13dp</dimen>
+
+    <!--SSH-->
+    <dimen name="dialog_basic_height">800dp</dimen>
+    <dimen name="padding">3dp</dimen>
+    <dimen name="layout_margin">5dp</dimen>
 </resources>

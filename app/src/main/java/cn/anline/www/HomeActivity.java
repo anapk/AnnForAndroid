@@ -43,6 +43,7 @@ import java.util.Map;
 import cn.anline.www.ann.OfficeWebsiteActivity;
 import cn.anline.www.find.CircleMenuLayout;
 import cn.anline.www.qrcode.ScannerActivity;
+import cn.anline.www.ssh.client.SSHClientActivity;
 import cn.anline.www.tools.ZbQZoneActivity;
 
 public class HomeActivity extends Activity {
@@ -96,12 +97,26 @@ public class HomeActivity extends Activity {
         {
             CircleMenuLayout mCircleMenuLayout;
 
-            String[] mItemTexts = new String[] { "安全中心 ", "特色服务", "投资理财",
-                    "转账汇款", "我的账户", "信用卡" };
-            int[] mItemImgs = new int[] { R.drawable.home_mbank_1_normal,
-                    R.drawable.home_mbank_2_normal, R.drawable.home_mbank_3_normal,
-                    R.drawable.home_mbank_4_normal, R.drawable.home_mbank_5_normal,
-                    R.drawable.home_mbank_6_normal };
+            String[] mItemTexts = new String[] {
+                    "SSH客户端 ",
+                    "VNC客户端",
+                    "PHP服务器",
+                    "FTP服务器",
+                    "FTP客户端",
+                    "HTTP服务器",
+                    "Python运行器" ,
+                    "Jetty服务器"
+            };
+            int[] mItemImgs = new int[] {
+                    R.drawable.find_ssh_client,
+                    R.drawable.find_vnc_client,
+                    R.drawable.find_php_server,
+                    R.drawable.find_ftp_server,
+                    R.drawable.find_ftp_client,
+                    R.drawable.find_http_server,
+                    R.drawable.find_python_server,
+                    R.drawable.find_jetty_server
+            };
 
             boolean isFindSetMenu = false;
 
@@ -230,6 +245,59 @@ public class HomeActivity extends Activity {
 
                             @Override
                             public void itemClick(View view, int pos) {
+                                switch (pos){
+                                    case 0:
+                                    {//SSH客户端
+                                        Intent goSSHWindow = new Intent(getApplicationContext(), SSHClientActivity.class);
+                                        startActivity(goSSHWindow);
+
+                                    }
+                                        break;
+                                    case 1:
+                                    {
+                                    //VNC客户端
+
+                                    }
+                                    break;
+                                    case 2:
+                                    {
+                                    //PHP服务器
+
+                                    }
+                                    break;
+                                    case 3:
+                                    {
+                                    //FTP服务器
+
+                                    }
+                                    break;
+                                    case 4:
+                                    {
+                                    //FTP客户端
+
+                                    }
+                                    break;
+                                    case 5:
+                                    {
+                                    //HTTP服务器
+
+                                    }
+                                    break;
+                                    case 6:
+                                    {
+                                    //Python服务器
+
+                                    }
+                                    break;
+                                    case 7:
+                                    {
+                                    //Jetty服务器
+
+                                    }
+                                    break;
+                                    default:
+                                        break;
+                                }
                                 Toast.makeText(getApplicationContext(), mItemTexts[pos],
                                         Toast.LENGTH_SHORT).show();
 
@@ -237,6 +305,7 @@ public class HomeActivity extends Activity {
 
                             @Override
                             public void itemCenterClick(View view) {
+
                                 Toast.makeText(getApplicationContext(),
                                         "you can do something just like ccb  ",
                                         Toast.LENGTH_SHORT).show();

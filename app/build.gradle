@@ -32,6 +32,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+    compile 'com.jcraft:jsch:0.1.51'
+    compile 'org.bouncycastle:bcprov-jdk16:1.46'
     compile files('libs/libammsdk.jar')
     compile files('libs/MobCommons.jar')
     compile files('libs/MobTools.jar')

@@ -88,6 +88,14 @@
     <string name="register_login_text">注册登录</string>
     <string name="server_phone">客服电话：400-0000-0000</string>
 
+    <string name="sshusername">用户名</string>
+    <string name="sshhostname">主机名</string>
+    <string name="sshpassword">密码</string>
+    <string name="sshconnect_btn">连接</string>
+    <string name="up">上传</string>
+    <string name="taskfail">命令执行失败</string>
+    <string name="filetransfer">文件传输</string>
+
     <string-array name="sync_tech_array">
         <item>本地教材</item>
         <item>在线教材</item>
