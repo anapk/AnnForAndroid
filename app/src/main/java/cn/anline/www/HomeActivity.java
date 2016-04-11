@@ -99,13 +99,17 @@ public class HomeActivity extends Activity {
 
             String[] mItemTexts = new String[] {
                     "SSH客户端 ",
-                    "VNC客户端",
+                    "VNC View",
                     "PHP服务器",
                     "FTP服务器",
                     "FTP客户端",
                     "HTTP服务器",
-                    "Python运行器" ,
-                    "Jetty服务器"
+                    "Python运行时",
+                    "Jetty服务器",
+                    "VNC服务器",
+                    "VPN服务器",
+                    "Ruby运行时",
+                    "Java 反编译"
             };
             int[] mItemImgs = new int[] {
                     R.drawable.find_ssh_client,
@@ -115,7 +119,12 @@ public class HomeActivity extends Activity {
                     R.drawable.find_ftp_client,
                     R.drawable.find_http_server,
                     R.drawable.find_python_server,
-                    R.drawable.find_jetty_server
+                    R.drawable.find_jetty_server,
+                    R.drawable.find_vnc_server,
+                    R.drawable.find_vpn_server,
+                    R.drawable.find_ruby_server,
+                    R.drawable.find_java_decode
+
             };
 
             boolean isFindSetMenu = false;
@@ -292,6 +301,30 @@ public class HomeActivity extends Activity {
                                     case 7:
                                     {
                                     //Jetty服务器
+
+                                    }
+                                    break;
+                                    case 8:
+                                    {
+                                        //VNC服务器
+
+                                    }
+                                    break;
+                                    case 9:
+                                    {
+                                        //VPN服务器
+
+                                    }
+                                    break;
+                                    case 10:
+                                    {
+                                        //Ruby服务器
+
+                                    }
+                                    break;
+                                    case 11:
+                                    {
+                                        //Java反编译
 
                                     }
                                     break;
