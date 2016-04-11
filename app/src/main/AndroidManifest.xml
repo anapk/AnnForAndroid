@@ -107,7 +107,21 @@
         <activity android:name=".ssh.client.SSHFileListActivity"
             android:theme="@style/AndroidSSH"/>
         <activity android:name=".ssh.client.SSHConfigActivity"
-            android:theme="@style/AndroidSSH"></activity>
+            android:theme="@style/AndroidSSH">
+
+        </activity>
+
+        <activity android:name=".vpn.local.LocalVPN"/>
+        <service
+            android:name=".vpn.local.LocalVPNService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

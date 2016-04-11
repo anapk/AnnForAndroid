@@ -45,6 +45,7 @@ import cn.anline.www.find.CircleMenuLayout;
 import cn.anline.www.qrcode.ScannerActivity;
 import cn.anline.www.ssh.client.SSHClientActivity;
 import cn.anline.www.tools.ZbQZoneActivity;
+import cn.anline.www.vpn.local.LocalVPN;
 
 public class HomeActivity extends Activity {
     private ViewPager mTabPager;
@@ -313,6 +314,8 @@ public class HomeActivity extends Activity {
                                     case 9:
                                     {
                                         //VPN服务器
+                                        Intent goVPNLocalIntent = new Intent(getApplicationContext(), LocalVPN.class);
+                                        startActivity(goVPNLocalIntent);
 
                                     }
                                     break;

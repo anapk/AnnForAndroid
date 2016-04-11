@@ -35,6 +35,10 @@
     <string name="web_share_timeline">分享到朋友圈</string>
     <string name="web_share_weibo">分享到新浪微博</string>
 
+
+    <string name="start_vpn">开启 VPN</string>
+    <string name="stop_vpn">从状态栏停止</string>
+
     <string name="str_image_local">本地图片</string>
     <string name="syn_tech">领先技术</string>
     <string name="exam_room">模拟考场</string>
