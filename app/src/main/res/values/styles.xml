@@ -56,4 +56,22 @@
         <item name="android:background">@color/almostblack</item>
         <item name="android:padding">@dimen/padding</item>
     </style>
+
+
+
+    <!--FTP server-->
+
+
+
+    <style name="PrimFtpdActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <declare-styleable name="customAttrs">
+        <attr name="iconStart" format="reference" />
+        <attr name="iconStop" format="reference" />
+        <attr name="iconSettings" format="reference" />
+        <attr name="iconRefresh" format="reference" />
+    </declare-styleable>
 </resources>
+

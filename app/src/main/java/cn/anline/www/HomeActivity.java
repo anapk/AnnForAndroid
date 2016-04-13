@@ -42,6 +42,7 @@ import java.util.Map;
 
 import cn.anline.www.ann.OfficeWebsiteActivity;
 import cn.anline.www.find.CircleMenuLayout;
+import cn.anline.www.ftp.server.primftpd.PrimitiveFtpdActivity;
 import cn.anline.www.qrcode.ScannerActivity;
 import cn.anline.www.ssh.client.SSHClientActivity;
 import cn.anline.www.tools.ZbQZoneActivity;
@@ -266,49 +267,43 @@ public class HomeActivity extends Activity {
                                     case 1:
                                     {
                                     //VNC客户端
-
                                     }
                                     break;
                                     case 2:
                                     {
                                     //PHP服务器
-
                                     }
                                     break;
                                     case 3:
                                     {
                                     //FTP服务器
-
+                                        Intent goFtpSer =new Intent(getApplicationContext(),PrimitiveFtpdActivity.class);
+                                        startActivity(goFtpSer);
                                     }
                                     break;
                                     case 4:
                                     {
                                     //FTP客户端
-
                                     }
                                     break;
                                     case 5:
                                     {
                                     //HTTP服务器
-
                                     }
                                     break;
                                     case 6:
                                     {
                                     //Python服务器
-
                                     }
                                     break;
                                     case 7:
                                     {
                                     //Jetty服务器
-
                                     }
                                     break;
                                     case 8:
                                     {
                                         //VNC服务器
-
                                     }
                                     break;
                                     case 9:
@@ -316,19 +311,16 @@ public class HomeActivity extends Activity {
                                         //VPN服务器
                                         Intent goVPNLocalIntent = new Intent(getApplicationContext(), LocalVPN.class);
                                         startActivity(goVPNLocalIntent);
-
                                     }
                                     break;
                                     case 10:
                                     {
                                         //Ruby服务器
-
                                     }
                                     break;
                                     case 11:
                                     {
                                         //Java反编译
-
                                     }
                                     break;
                                     default:
@@ -341,10 +333,6 @@ public class HomeActivity extends Activity {
 
                             @Override
                             public void itemCenterClick(View view) {
-
-                                Toast.makeText(getApplicationContext(),
-                                        "you can do something just like ccb  ",
-                                        Toast.LENGTH_SHORT).show();
 
                             }
                         });

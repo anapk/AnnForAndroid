@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="16dp"
-
-    tools:context="cn.anline.ui.qrcode.ResultTextShowActivity">
+    tools:context=".qrcode.ResultTextShowActivity">
     <!--<android.support.v7.widget.Toolbar-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->
@@ -20,7 +19,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/button"
         android:id="@+id/textView_rsText"
         android:background="@drawable/about_redius"/>
 

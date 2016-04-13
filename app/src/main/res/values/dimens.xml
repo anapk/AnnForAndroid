@@ -48,4 +48,7 @@
     <dimen name="dialog_basic_height">800dp</dimen>
     <dimen name="padding">3dp</dimen>
     <dimen name="layout_margin">5dp</dimen>
+    <!--FTP-->
+    <dimen name="widgetBackgroundRadius">8dp</dimen>
+
 </resources>
